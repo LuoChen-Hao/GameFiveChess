@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/back_ground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:orientation="vertical">
+    <!--游戏信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <!--玩家信息-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                <!--玩家名-->
+                <TextView
+                    android:id="@+id/user_name_tv"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="@string/player"
+                    android:textSize="16sp" />
+                <!--玩家当前执子-->
+                <ImageView
+                    android:id="@+id/user_chess_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/user_name_tv"
+                    android:background="@drawable/white_chess"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <!--得分信息-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/user_score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Score : 0"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/user_think_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/user_score_tv"
+                    android:background="@drawable/think" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/current_gamer"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:background="@mipmap/vs"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <!--AI信息-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                <!--AI 名-->
+                <TextView
+                    android:id="@+id/ai_name_tv"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="@string/computer"
+                    android:textSize="16sp" />
+                <!--ai当前执子-->
+                <ImageView
+                    android:id="@+id/ai_chess_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ai_name_tv"
+                    android:background="@drawable/black_chess"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+            <!--得分信息-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ai_score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Score : 0"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ai_think_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/ai_score_tv"
+                    android:background="@drawable/think" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--游戏界面-->
+    <com.hao.udv.FiveChessView
+        android:id="@+id/five_chess_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--重新开始-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/restart_game"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/restart"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+</LinearLayout>

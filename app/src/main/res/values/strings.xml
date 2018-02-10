@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GameFiveChess</string>
+    <string name="choose_chess">选择执子</string>
+    <string name="first">先手</string>
+    <string name="second">后手</string>
+    <string name="player">玩家</string>
+    <string name="computer">电脑</string>
+</resources>
